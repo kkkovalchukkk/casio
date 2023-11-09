@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url('LondrinaSolid-Thin.eot');
+    src: local('Londrina Solid Thin'), local('LondrinaSolid-Thin'),
+        url('LondrinaSolid-Thin.eot?#iefix') format('embedded-opentype'),
+        url('LondrinaSolid-Thin.woff2') format('woff2'),
+        url('LondrinaSolid-Thin.woff') format('woff'),
+        url('LondrinaSolid-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url('LondrinaSolid-Regular.eot');
+    src: local('Londrina Solid Regular'), local('LondrinaSolid-Regular'),
+        url('LondrinaSolid-Regular.eot?#iefix') format('embedded-opentype'),
+        url('LondrinaSolid-Regular.woff2') format('woff2'),
+        url('LondrinaSolid-Regular.woff') format('woff'),
+        url('LondrinaSolid-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url('LondrinaSolid-Light.eot');
+    src: local('Londrina Solid Light'), local('LondrinaSolid-Light'),
+        url('LondrinaSolid-Light.eot?#iefix') format('embedded-opentype'),
+        url('LondrinaSolid-Light.woff2') format('woff2'),
+        url('LondrinaSolid-Light.woff') format('woff'),
+        url('LondrinaSolid-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url('LondrinaSolid-Black.eot');
+    src: local('Londrina Solid Black'), local('LondrinaSolid-Black'),
+        url('LondrinaSolid-Black.eot?#iefix') format('embedded-opentype'),
+        url('LondrinaSolid-Black.woff2') format('woff2'),
+        url('LondrinaSolid-Black.woff') format('woff'),
+        url('LondrinaSolid-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
