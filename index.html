@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX AZART</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <div class="page auth-page">
+        <a href="/" class="logo-link">
+            <img src="./assets/img/logo.png" alt="
+            MAX AZART | PLAY 3D CASINO" class="logo">
+        </a>
+        <button class="btn auth-page__auth-btn" type="button" id="toggle-auth-popup">
+            Вход/регистрация
+        </button>
+        <div class="popup popup--register">
+            <div class="popup__content">
+                <h2 class="popup__heading">
+                    Регистрация
+                </h2>
+                <form action="" class="popup__register-form">
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            Логин
+                            <input required type="text" placeholder="nikolai1991" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            Имя
+                            <input required type="text" placeholder="Николай" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            Фамилия
+                            <input required type="text" placeholder="Иванов" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            E-mail
+                            <input required type="email" placeholder="a.ivanov@ivanov.com" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            Телефон
+                            <input required type="tel" placeholder="+7 (999) 999-99-99" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            Пароль
+                            <input required type="password" placeholder="**********" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            Повторите пароль
+                            <input required type="password" placeholder="**********" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <label class="popup__checkbox-label">
+                        <input type="checkbox" style="display: none;" class="popup__checkbox-input">
+                        <div class="checkbox"></div>
+                        Я согласен(на) с политикой обработки персональных данных
+                    </label>
+                    <button class="btn popup__register-btn" type="submit">
+                        Зарегистрироваться
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup--login">
+            <div class="popup__content">
+                <h2 class="popup__heading">
+                    Вход
+                </h2>
+                <form action="" class="popup__login-form">
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            Логин
+                            <input required type="text" placeholder="nikolai1991" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <fieldset class="popup__login-form-fieldset">
+                        <label class="popup__login-form-label">
+                            Пароль
+                            <input required type="password" placeholder="**********" class="popup__input">
+                        </label>
+                    </fieldset>
+                    <div class="popup__login-form-footer">
+                        <a href="#" class="popup__login-form-link">
+                            Забыли пароль?
+                        </a>
+                        <button class="btn popup__login-form-btn" type="submit">Войти</button>
+                    </div>
+                </form>
+            </div>
+            <button class="btn auth-page__register-btn" type="button"
+                id="toggle-register-popup">Зарегистрироваться</button>
+        </div>
+        <div class="player auth-page__player">
+            <div class="player__controls">
+                <button type="button" class="player__controls-btn">
+                    <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.907796 10.4668L11.8321 17.7158C12.7789 18.344 14.017 17.6675 14.017 16.5559L14.017 13.0281L21.1542 17.7158C22.101 18.344 23.3391 17.6675 23.3391 16.5559L23.3391 2.05795C23.3391 0.946442 22.0768 0.269869 21.1543 0.898115L14.0413 5.60996L14.0413 2.05795C14.0413 0.946441 12.7789 0.269868 11.8564 0.898114L0.932071 8.14711C0.0581234 8.70287 0.0581233 9.91103 0.907796 10.4668Z"
+                            fill="white" />
+                    </svg>
+                </button>
+                <button type="button" class="player__controls-btn">
+                    <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.8634 10.879L3.95552 1.20605C2.68411 0.379715 0.963974 1.27896 0.963974 2.76149V22.0831C0.963974 23.5899 2.68411 24.4648 3.95552 23.6385L18.8634 13.9656C19.9852 13.2608 19.9852 11.6081 18.8634 10.879Z"
+                            fill="white" />
+                    </svg>
+                </button>
+                <button type="button" class="player__controls-btn">
+                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.8468 0.891357H1.29727C0.774666 0.891357 0.326721 1.30368 0.326721 1.83726V23.011C0.326721 23.5204 0.74978 23.9569 1.29727 23.9569H6.82191C7.34452 23.9569 7.79246 23.5446 7.79246 23.011V1.83726C7.79246 1.30368 7.3694 0.891357 6.8468 0.891357Z"
+                            fill="white" />
+                        <path
+                            d="M19.5636 0.891357H14.014C13.4914 0.891357 13.0435 1.30368 13.0435 1.83726V23.011C13.0435 23.5204 13.4665 23.9569 14.014 23.9569H19.5387C20.0613 23.9569 20.5092 23.5446 20.5092 23.011V1.83726C20.5092 1.30368 20.0862 0.891357 19.5636 0.891357Z"
+                            fill="white" />
+                    </svg>
+                </button>
+                <button type="button" class="player__controls-btn">
+                    <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.565 8.46802L11.6406 1.21903C10.6939 0.59078 9.45576 1.26735 9.45576 2.37887V5.90671L2.31852 1.21903C1.37174 0.59078 0.133652 1.26735 0.133652 2.37887L0.133652 16.8769C0.133652 17.9884 1.39602 18.6649 2.31852 18.0367L9.43148 13.3249V16.8769C9.43148 17.9884 10.6939 18.6649 11.6164 18.0367L22.5407 10.7877C23.4146 10.2319 23.4146 9.02378 22.565 8.46802Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </div>
+            <div class="player__menu">
+                <button type="button" class="player__menu-btn">
+                    <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_0_1278)">
+                            <path
+                                d="M22.5121 0.978271H2.07608C1.36187 0.978271 0.761292 1.61834 0.761292 2.37951V16.8762C0.761292 17.6547 1.36187 18.2775 2.07608 18.2775H22.5121C23.2506 18.2775 23.8269 17.6374 23.8269 16.8762V2.37951C23.8269 1.61834 23.2344 0.978271 22.5121 0.978271ZM6.21522 15.4231H3.61C3.16362 15.4231 2.7984 15.0339 2.7984 14.5581C2.7984 14.0824 3.16362 13.6932 3.61 13.6932H6.21522C6.66971 13.6932 7.02682 14.0824 7.02682 14.5581C7.02682 15.0339 6.66971 15.4231 6.21522 15.4231ZM6.21522 10.4928H3.61C3.16362 10.4928 2.7984 10.1036 2.7984 9.62786C2.7984 9.15213 3.16362 8.7629 3.61 8.7629H6.21522C6.66971 8.7629 7.02682 9.15213 7.02682 9.62786C7.02682 10.1036 6.66971 10.4928 6.21522 10.4928ZM6.21522 5.56255H3.61C3.16362 5.56255 2.7984 5.17332 2.7984 4.6976C2.7984 4.22187 3.16362 3.83264 3.61 3.83264H6.21522C6.66971 3.83264 7.02682 4.21322 7.02682 4.6976C7.02682 5.18197 6.66971 5.56255 6.21522 5.56255ZM20.9782 15.4231H8.66624C8.21986 15.4231 7.85465 15.0339 7.85465 14.5581C7.85465 14.0824 8.21986 13.6932 8.66624 13.6932H20.9782C21.4245 13.6932 21.7898 14.0824 21.7898 14.5581C21.7898 15.0339 21.4245 15.4231 20.9782 15.4231ZM20.9782 10.4928H8.66624C8.21986 10.4928 7.85465 10.1036 7.85465 9.62786C7.85465 9.15213 8.21986 8.7629 8.66624 8.7629H20.9782C21.4245 8.7629 21.7898 9.15213 21.7898 9.62786C21.7898 10.1036 21.4245 10.4928 20.9782 10.4928ZM20.9782 5.56255H8.66624C8.21986 5.56255 7.85465 5.17332 7.85465 4.6976C7.85465 4.22187 8.21986 3.83264 8.66624 3.83264H20.9782C21.4245 3.83264 21.7898 4.21322 21.7898 4.6976C21.7898 5.18197 21.4245 5.56255 20.9782 5.56255Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_0_1278">
+                                <rect width="23.0656" height="17.2992" fill="white"
+                                    transform="translate(0.761292 0.978271)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <button type="button" class="player__menu-btn">
+                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.15538 12.837C4.53351 12.837 4.84073 12.5211 4.84073 12.108V7.90416H15.3336V10.0426C15.3336 10.7472 16.1371 11.136 16.6571 10.6986L21.7145 6.54337C22.1162 6.20317 22.1162 5.57137 21.7145 5.23117L16.6571 1.07589C16.1135 0.638493 15.3336 1.02729 15.3336 1.73199V3.87038H1.60305C1.22493 3.87038 0.894073 4.18628 0.894073 4.57508V12.108C0.894073 12.4968 1.2013 12.837 1.60305 12.837H4.15538Z"
+                            fill="white" />
+                        <path
+                            d="M21.833 12.0117H19.2807C18.9026 12.0117 18.5717 12.3276 18.5717 12.7164V16.9203H8.10242V14.7819C8.10242 14.0772 7.29891 13.6884 6.77899 14.1258L1.69797 18.3054C1.29621 18.6456 1.29621 19.2774 1.69797 19.6176L6.75536 23.7729C7.29891 24.2103 8.07879 23.8215 8.07879 23.1168V20.9784H21.8094C22.1875 20.9784 22.5184 20.6625 22.5184 20.2494V12.7164C22.5184 12.3276 22.2111 12.0117 21.833 12.0117Z"
+                            fill="white" />
+                    </svg>
+                </button>
+                <button type="button" class="player__menu-btn">
+                    <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.4985 0.765162L4.7139 5.26771H1.91881C1.18966 5.26771 0.582031 5.86145 0.582031 6.62837V12.9864C0.582031 13.7285 1.16535 14.347 1.91881 14.347H4.73821L10.4985 18.8496C11.495 19.6412 12.9777 18.8991 12.9777 17.6126V2.00213C12.9533 0.690944 11.495 -0.0264948 10.4985 0.765162Z"
+                            fill="white" />
+                        <path
+                            d="M21.6784 9.79325L23.4284 8.01202C23.7201 7.71515 23.7201 7.22036 23.4284 6.89875L22.602 6.05761C22.3104 5.76074 21.8243 5.76074 21.5083 6.05761L19.7583 7.83884L18.0084 6.05761C17.7167 5.76074 17.2306 5.76074 16.9146 6.05761L16.0883 6.89875C15.7966 7.19562 15.7966 7.69041 16.0883 8.01202L17.8382 9.79325L16.0883 11.5745C15.7966 11.8713 15.7966 12.3661 16.0883 12.6877L16.9146 13.5289C17.2063 13.8257 17.6924 13.8257 18.0084 13.5289L19.7583 11.7476L21.5083 13.5289C21.8 13.8257 22.2861 13.8257 22.602 13.5289L23.4284 12.6877C23.7201 12.3909 23.7201 11.8961 23.4284 11.5745L21.6784 9.79325Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="map auth-page__map">
+            <span class="map__name">
+                Карта лайнера
+            </span>
+            <div class="map__btn-wrapper">
+                <span class="map__btn-wrapper-label">
+                    Добавить место в избранное
+                </span>
+                <button class="map__fav-btn" type="button">
+                    <svg width="41" height="39" viewBox="0 0 41 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.164 2.23157L26.8077 6.28451C28.2869 7.92953 31.1348 9.97481 33.1676 10.853L37.6896 12.8046C39.7224 13.6827 40.5744 16.0002 39.5917 17.9814L36.7623 23.6874C35.7796 25.6686 34.7399 29.0499 34.4399 31.2409L33.9353 34.928C33.6353 37.1182 31.6562 38.4342 29.5151 37.8682L24.3617 36.5058C22.2206 35.939 18.7487 35.939 16.6076 36.5058L11.4542 37.869C9.31309 38.435 7.36934 37.1142 7.11343 34.9184L6.68505 31.2505C6.42915 29.0547 5.40152 25.6806 4.39073 23.7138L1.43058 17.9558C0.419799 15.989 1.24928 13.6851 3.28368 12.811L7.85226 10.8474C9.88667 9.97321 12.7321 7.92713 14.2058 6.2773L17.8149 2.23958C19.2902 0.589747 21.6848 0.586545 23.164 2.23157Z"
+                            fill="url(#paint0_linear_0_640)" stroke="url(#paint1_linear_0_640)" stroke-width="2" />
+                        <defs>
+                            <linearGradient id="paint0_linear_0_640" x1="8.87711" y1="16.734" x2="37.6645" y2="33.283"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#EE7F39" />
+                                <stop offset="1" stop-color="#B53811" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_0_640" x1="20.7584" y1="16.734" x2="29.0768" y2="34.5841"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#EE7F39" />
+                                <stop offset="1" stop-color="#FFD391" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <img src="./assets/svg/map.svg" alt="" class="map__img">
+        </div>
+    </div>
+    <script src="./scripts/popup.js"></script>
+</body>
+
+</html>
