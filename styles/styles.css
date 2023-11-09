@@ -1,0 +1,12 @@
+@import url("./fonts.css");
+@import url("./reset.css");
+
+
+:root {
+    --mainFont: 'Tahoma', sans-serif;
+}
+
+body {
+    min-width: 320px;
+    font-family: var(--mainFont);
+}
