@@ -527,6 +527,7 @@ body {
 
 
 .popup--window {
+    width: 100%;
     max-width: 1133px;
     z-index: 4;
     height: fit-content;
