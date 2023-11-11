@@ -9,6 +9,46 @@
 </head>
 
 <body>
+    <div class="burger-menu">
+        <button type="button" class="burger-menu__close-btn">
+            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_0_2779)">
+                    <path
+                        d="M25.5 0C11.4172 0 0 11.4172 0 25.5C0 39.5828 11.4172 51 25.5 51C39.5828 51 51 39.5828 51 25.5C51 11.4172 39.5828 0 25.5 0ZM37.0965 37.0945C36.5587 37.6316 35.8296 37.9333 35.0695 37.9333C34.3093 37.9333 33.5803 37.6316 33.0424 37.0945L25.5 29.5571L17.9596 37.0965C17.422 37.6341 16.6928 37.9362 15.9325 37.9362C15.1722 37.9362 14.4431 37.6341 13.9055 37.0965C13.3679 36.5589 13.0658 35.8298 13.0658 35.0695C13.0658 34.3092 13.3679 33.58 13.9055 33.0424L21.4459 25.5L13.9055 17.9596C13.3679 17.422 13.0658 16.6928 13.0658 15.9325C13.0658 15.1722 13.3679 14.4431 13.9055 13.9055C14.4431 13.3679 15.1722 13.0658 15.9325 13.0658C16.6928 13.0658 17.422 13.3679 17.9596 13.9055L25.5 21.4459L33.0404 13.9055C33.578 13.3679 34.3072 13.0658 35.0675 13.0658C35.8278 13.0658 36.5569 13.3679 37.0945 13.9055C37.6321 14.4431 37.9342 15.1722 37.9342 15.9325C37.9342 16.6928 37.6321 17.422 37.0945 17.9596L29.5561 25.5L37.0965 33.0404C37.6336 33.5783 37.9353 34.3074 37.9353 35.0675C37.9353 35.8276 37.6336 36.5567 37.0965 37.0945Z"
+                        fill="white" fill-opacity="0.26" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_0_2779">
+                        <rect width="51" height="51" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </button>
+        <div class="profile burger-menu__profile">
+            <span class="profile__name">
+                nikolai1991
+            </span>
+            <div class="profile__money">
+                10 000
+            </div>
+        </div>
+        <div class="burger-menu__nav">
+            <button type="button" class="burger-menu__nav-btn">
+                Мой профиль
+            </button>
+            <button type="button" class="burger-menu__nav-btn">
+                Избранные места
+            </button>
+            <button type="button" class="burger-menu__nav-btn">
+                Баланс
+            </button>
+            <button type="button" class="burger-menu__nav-btn">
+                Квесты
+            </button>
+        </div>
+        <img src="./assets/img/logo.png" alt="
+                                    MAX AZART | PLAY 3D CASINO" class="logo">
+    </div>
     <main class="page main-page">
         <a href="/" class="logo-link">
             <img src="./assets/img/logo.png" alt="
@@ -845,7 +885,33 @@
                 </div>
             </div>
         </div>
-
+        <div class="mobile-profile">
+            <img src="./assets/img/mobie-avatar.svg" alt="nikolai1991" class="mobile-profile__avatar">
+            <span class="mobile-profile__name">
+                nikolai1991
+            </span>
+        </div>
+        <button class="burger-btn" type="button">
+            <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="34.5" cy="34.5" r="31.5" fill="url(#paint0_linear_221_74)"
+                    stroke="url(#paint1_linear_221_74)" stroke-width="6" />
+                <path d="M22 24H47" stroke="white" stroke-width="4" stroke-linecap="round" />
+                <path d="M22 34H47" stroke="white" stroke-width="4" stroke-linecap="round" />
+                <path d="M22 44H47" stroke="white" stroke-width="4" stroke-linecap="round" />
+                <defs>
+                    <linearGradient id="paint0_linear_221_74" x1="68.9782" y1="51.1993" x2="163.616" y2="106.227"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#7339BB" />
+                        <stop offset="1" stop-color="#1A0653" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_221_74" x1="108.261" y1="51.1992" x2="135.253" y2="109.784"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#EE7F39" />
+                        <stop offset="1" stop-color="#FFD391" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </button>
         <div class="map main-page__map">
             <span class="map__name">
                 Карта лайнера
@@ -913,8 +979,7 @@
         </div>
     </main>
     <script src="./scripts/message.js"></script>
-    <script src="./scripts/tab.js"></script>
-    <script src="./scripts/profile.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
