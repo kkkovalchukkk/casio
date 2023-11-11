@@ -78,6 +78,10 @@ body {
 
 .popup {
     position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     visibility: hidden;
     opacity: 0;
     transform: translateY(-100%);
@@ -251,7 +255,9 @@ body {
     right: 48px;
     bottom: 32px;
     padding: 12px 15px;
-    background: linear-gradient(119deg, #7339BB 28.08%, #1A0653 91.63%);
+    background: url("../assets/svg/new-map.svg"), linear-gradient(119deg, #7339BB 28.08%, #1A0653 91.63%);
+    background-repeat: no-repeat;
+    background-position: left 37px bottom 0, center;
     border: 2px solid #EE7F39;
     border-radius: 20px;
     display: flex;
@@ -527,7 +533,7 @@ body {
 
 
 .popup--window {
-    width: 100%;
+    width: 95%;
     max-width: 1133px;
     z-index: 4;
     height: fit-content;
@@ -824,6 +830,28 @@ body {
 
 .logo {}
 
+.map-btn {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    cursor: pointer;
+}
+
+
+.popup__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+
+}
+
+
 @media (max-width:1280px) {
     .popup--window .popup__register-form {
         width: 100%;
@@ -836,8 +864,39 @@ body {
 }
 
 @media (max-width:1196px) {
+
+    .profile {
+        right: 16px;
+        top: 16px;
+    }
+
     .map {
-        display: none;
+        right: 16px;
+        bottom: 16px;
+        max-width: 266px;
+        min-height: 275px;
+    }
+
+    .player {
+        bottom: 16px;
+    }
+
+    .map__btn-wrapper-label {
+        left: unset;
+        right: 0;
+        background-image: none;
+        padding: 8px 16px;
+        background: linear-gradient(92deg, #7339BB 39.63%, #210A5C 107.43%);
+        border: 2px solid #EE7F39;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width:1024px) {
+    .player {
+        margin: 0;
+        margin-right: auto;
+        left: 16px;
     }
 }
 
@@ -864,6 +923,23 @@ body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+    .map {
+        max-width: 247px;
+        min-height: 253px;
+        padding: 6px;
+    }
+
+    .map__name {
+        padding-left: 49px;
+        font-size: 12px;
+    }
+
+    .map__fav-btn svg {
+        width: 32px;
+    }
+
 }
 
 @media (max-width:1076px) {
@@ -932,6 +1008,26 @@ body {
 }
 
 @media (max-width:768px) {
+    .message-box__label {
+        font-size: 14px;
+        margin-bottom: 16px;
+
+    }
+
+    body {
+        background-size: 200px, cover;
+    }
+
+    .message-box {
+        background-size: contain;
+        left: 115px;
+        bottom: 171px;
+        max-width: 265px;
+        padding-bottom: 31.5px;
+        padding-left: 32.5px;
+
+    }
+
     .logo {
         max-width: 218px;
     }
@@ -989,7 +1085,7 @@ body {
 
 
     .popup__content {
-        padding: 38px 19px;
+        /* padding: 38px 19px; */
     }
 
     .popup__heading {
@@ -1000,6 +1096,13 @@ body {
 
     .popup--register {
         max-width: 480px;
+    }
+}
+
+@media (max-width:767px) {
+    .player {
+        min-width: unset;
+        /* flex-direction: column; */
     }
 }
 
@@ -1035,6 +1138,20 @@ body {
 
 
 @media (max-width:640px) {
+    .player {
+        min-width: unset;
+        gap: 16px;
+        padding: 10px 14px;
+        /* flex-direction: column; */
+
+    }
+
+
+    .player__controls-btn svg,
+    .player__menu-btn svg {
+        width: 16px;
+        height: 16px;
+    }
 
     .popup--window .popup__content {
         flex-direction: column;
@@ -1071,6 +1188,29 @@ body {
 }
 
 @media (max-width:576px) {
+
+
+    .map {
+        display: none;
+    }
+
+    .map-btn {
+        display: initial;
+    }
+
+    .player {
+        border-radius: 8px;
+    }
+
+    .player__menu svg {
+        width: 12px;
+    }
+
+    .map--active {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
 
     .auth-page {
         padding: 16px;
@@ -1114,41 +1254,6 @@ body {
         padding: 16px;
     }
 
-    body {
-        background-size: 40%, cover;
-    }
-
-    .message-box {
-        background-size: contain;
-        left: 115px;
-        bottom: 171px;
-        max-width: 265px;
-        padding-bottom: 31.5px;
-        padding-left: 32.5px;
-
-    }
-
-    .message-box__close-btn {}
-
-    .message-box__label {
-        font-size: 14px;
-        margin-bottom: 16px;
-
-    }
-
-    .player {
-        min-width: unset;
-        gap: 64px;
-        padding: 10px 14px;
-
-
-    }
-
-    .player__controls-btn svg,
-    .player__menu-btn svg {
-        width: 16px;
-        height: 16px;
-    }
 }
 
 @media (max-width:495px) {
@@ -1171,7 +1276,24 @@ body {
     }
 }
 
+@media (max-width:475px) {
+    .map {
+        max-width: 214px;
+        min-height: 193px;
+    }
+
+    .message-box {
+        left: 101px;
+        bottom: 135px;
+        max-width: 258px;
+    }
+}
+
 @media (max-width:425px) {
+
+    .map-btn {
+        bottom: 64px;
+    }
 
     .popup__register-form {
         align-items: center;
@@ -1212,9 +1334,7 @@ body {
         font-size: 14px;
     }
 
-    .message-box {
-        display: none;
-    }
+
 
     .player {
         gap: 24px;
@@ -1252,6 +1372,25 @@ body {
 @media (max-width:375px) {
     .logo {
         max-width: 120px;
+    }
+
+    body {
+        background-size: 145px, cover;
+    }
+
+    .message-box {
+        left: 76px;
+        bottom: 95px;
+        max-width: 232px;
+    }
+
+    .message-box__close-btn {
+        top: 19px;
+    }
+
+    .message-box__label,
+    .message-box__menu-link {
+        font-size: 12px;
     }
 
     .logo-link {

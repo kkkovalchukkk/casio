@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const toggleRegisterPopupBtnEl = document.querySelector(
     '#toggle-register-popup'
   );
+  const popupCloseBtnEls = document.querySelectorAll('.popup__close');
 
   const makeActive = (el, classname) => el.classList.add(classname);
   const makeInactive = (el, classname) => el.classList.remove(classname);
@@ -12,6 +13,13 @@ window.addEventListener('DOMContentLoaded', () => {
   toggleAuthPopupBtnEl.addEventListener('click', () => {
     makeInactive(registerPopupEl, 'active');
     makeActive(loginPopupEl, 'active');
+  });
+
+  popupCloseBtnEls.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      makeInactive(registerPopupEl, 'active');
+      makeInactive(loginPopupEl, 'active');
+    });
   });
   toggleRegisterPopupBtnEl.addEventListener('click', () => {
     makeActive(registerPopupEl, 'active');

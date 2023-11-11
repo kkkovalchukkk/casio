@@ -1,7 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const addClass = (el, className) => el.classList.add(className);
-  const removeClass = (el, className) => el.classList.remove(className);
-
   const profileEl = document.querySelector('#toggle-main-popup');
   const mainPopupEl = document.querySelector('.popup--window');
   const closeBtnEl = mainPopupEl.querySelector('.popup__close-btn');
@@ -17,8 +14,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const burgerNavBtnEls = document.querySelectorAll('.burger-menu__nav-btn');
 
+  const mapEl = document.querySelector('.map');
+  const toggleMapBtnEl = document.querySelector('#toggle-map-btn');
+
   const offScroll = () => document.body.classList.add('no-scroll');
   const onScroll = () => document.body.classList.remove('no-scroll');
+
+  const addClass = (el, className) => el.classList.add(className);
+  const removeClass = (el, className) => el.classList.remove(className);
+
+  const closeMapByClickOnOverlay = (e) => {
+    if (e.composedPath().includes(toggleMapBtnEl)) return;
+    if (!e.composedPath().includes(mapEl)) {
+      mapEl.classList.remove('map--active');
+      window.removeEventListener('click', closeMapByClickOnOverlay);
+    }
+  };
+
+  toggleMapBtnEl.addEventListener('click', () => {
+    mapEl.classList.add('map--active');
+    window.addEventListener('click', closeMapByClickOnOverlay);
+  });
 
   toggleBurgerMenuBtnEl.addEventListener('click', () => {
     burgerMenuEl.classList.add('burger-menu--active');
