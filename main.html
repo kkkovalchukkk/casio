@@ -981,6 +981,18 @@
         </div>
 
         <div class="map-viewer">
+            <div class="map-viewer__menu">
+                <button type="button" class="map-viewer__go-back-btn">
+                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0735 34.9264 -4.57764e-05 22.5 -4.57764e-05C10.0736 -4.57764e-05 0 10.0735 0 22.5C0 34.9264 10.0736 45 22.5 45ZM23.2053 16.8294C27.7008 16.9065 31.4513 19.501 32.633 23.3029C33.789 27.0021 32.1706 30.881 28.3944 33.3728C28.343 33.4242 28.266 33.4499 28.1889 33.4499H27.8806C27.7779 33.4499 27.6751 33.3985 27.5981 33.3215C27.4439 33.1673 27.4696 32.9361 27.6237 32.782C29.2678 31.2664 29.833 29.4425 29.1394 27.747C28.3173 25.769 25.9797 24.4589 23.2053 24.4589V28.8773C23.2053 28.9544 23.1796 29.0315 23.1282 29.1085C22.9998 29.2627 22.7686 29.314 22.5888 29.1856L11.1574 20.9653L11.0803 20.8882C10.9519 20.7084 10.9776 20.4772 11.1574 20.3487L22.5888 12.077C22.6658 12.0256 22.7429 12 22.82 12C23.0255 12 23.2053 12.1798 23.2053 12.3853V16.8294Z"
+                            fill="white" fill-opacity="0.3" />
+                    </svg>
+                </button>
+                <span class="map-viewer__current-location">
+                    1 палуба
+                </span>
+            </div>
             <div class="map-viewer__controls">
                 <button id="minus-scale-btn" type="button" class="map-viewer__controls-btn">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1020,8 +1032,8 @@
                     </defs>
                 </svg>
             </button>
-            <div class="map-viewer__content" >
-                <div class="map-viewer__content-item">
+            <div class="map-viewer__content">
+                <div class="map-viewer__content-item map-viewer__content-item--active" id="home-map">
                     <a href="#" class="hint hint--1">
                         <span class="hint__num">
                             1
@@ -1075,6 +1087,33 @@
                         </div>
                     </a>
                     <img src="./assets/img/map.png" alt="" class="map-viewer__img">
+                </div>
+                <div class="map-viewer__content-item map-viewer__location" id="location-1">
+                    <a href="#" class="map-viewer__content-item-link map-viewer__content-item-link--1">
+                        Балкон с роялем
+                    </a>
+                    <a href="#" class="map-viewer__content-item-link map-viewer__content-item-link--2">
+                        Трон
+                    </a>
+                    <a href="#" class="map-viewer__content-item-link map-viewer__content-item-link--3">
+                        Зал игровых автоматов
+                    </a>
+                    <a href="#" class="map-viewer__content-item-link map-viewer__content-item-link--4">
+                        Лифт
+                    </a>
+                    <a href="#" class="map-viewer__content-item-link map-viewer__content-item-link--5">
+                        Зал игровых автоматов
+                    </a>
+                    <img src="./assets/img/map-inside.png" alt="" class="map-viewer__img">
+                </div>
+                <div class="map-viewer__content-item map-viewer__location" id="location-2">
+                    <img src="./assets/img/map-inside.png" alt="" class="map-viewer__img">
+                </div>
+                <div class="map-viewer__content-item map-viewer__location" id="location-3">
+                    <img src="./assets/img/map-inside.png" alt="" class="map-viewer__img">
+                </div>
+                <div class="map-viewer__content-item map-viewer__location" id="location-4">
+                    <img src="./assets/img/map-inside.png" alt="" class="map-viewer__img">
                 </div>
 
             </div>

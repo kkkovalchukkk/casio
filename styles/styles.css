@@ -16,7 +16,7 @@ body {
 
 body {
     min-width: 320px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-image: url("../assets/img/girl.svg"), url("../assets/img/background.jpg");
     background-repeat: no-repeat;
     background-position: left bottom, center;
@@ -272,6 +272,7 @@ body.body--map {
     justify-content: space-between;
 }
 
+
 .map__name {
     padding-top: 12px;
     padding-right: 13px;
@@ -288,6 +289,16 @@ body.body--map {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
+    transition: .23s;
+}
+
+.map__name:hover {
+    transform: scale(1.05);
+}
+
+.map__name:active {
+    transform: scale(0.95);
 }
 
 .map__btn-wrapper {
@@ -866,9 +877,9 @@ body.body--map {
 
 .map-viewer {
     position: absolute;
-    width: 100%;
+    width: calc(100% - 64px);
     max-width: 1550px;
-    height: 860px;
+    height: 65vh;
     left: 0;
     top: 0;
     bottom: 0;
@@ -882,12 +893,31 @@ body.body--map {
     background-position: center;
     background-size: cover;
     backdrop-filter: blur(15px);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: .23s;
+}
+
+.map-viewer--active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+.map-viewer--fullscreen {
+    max-width: unset;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+
 }
 
 .map-viewer__controls {
     position: absolute;
-    left: 30px;
-    top: 30px;
+    left: 34px;
+    top: 102px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -918,10 +948,104 @@ body.body--map {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 1540px;
+    height: 860px;
     cursor: grab;
 }
+
+.map-viewer__content-item {
+    display: none;
+}
+
+.map-viewer__content-item--active {
+    display: initial;
+}
+
+
+.map-viewer__menu {
+    position: absolute;
+    display: none;
+    align-items: center;
+    gap: 32px;
+    top: 32px;
+    left: 32px;
+    z-index: 2;
+}
+
+.map-viewer__menu--active {
+    display: flex;
+}
+
+.map-viewer__go-back-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.map-viewer__current-location {
+    padding: 6px 24px;
+    background: linear-gradient(119deg, #EE7F39 28.08%, #B53811 91.63%);
+    border: 2px solid #EE7F39;
+    color: var(--white);
+    font-family: var(--mainFont);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 20px;
+}
+
+.map-viewer__content-item-link {
+    position: absolute;
+    padding: 9px 16px;
+    color: var(--white);
+    background: linear-gradient(119deg, #44167D 28.08%, #25115F 91.63%);
+    border: 2px solid #EE7F39;
+    text-align: center;
+    border-radius: 20px;
+    font-family: var(--mainFont);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: .23s;
+}
+
+
+.map-viewer__content-item-link:hover {
+    transform: scale(1.05);
+}
+
+.map-viewer__content-item-link:active {
+    transform: scale(0.95);
+}
+
+.map-viewer__content-item-link--1 {
+    left: 150px;
+    bottom: 390px;
+}
+
+.map-viewer__content-item-link--2 {
+    left: 300px;
+    bottom: 461px;
+}
+
+.map-viewer__content-item-link--3 {
+    left: 522px;
+    bottom: 507px;
+}
+
+.map-viewer__content-item-link--4 {
+    right: 343px;
+    bottom: 412px;
+}
+
+.map-viewer__content-item-link--5 {
+    right: 51px;
+    bottom: 390px;
+}
+
 
 .hint {
     position: absolute;
@@ -1017,8 +1141,8 @@ body.body--map {
     /* position: absolute;
     left: 0;
     top: 0; */
-    width: 100%;
-    height: 100%;
+    width: 1540px;
+    height: 860px;
     object-fit: cover;
     object-position: center;
     user-select: none;
@@ -1028,8 +1152,8 @@ body.body--map {
     /* position: absolute;
     left: 0;
     top: 0; */
-    width: 100%;
-    height: 100%;
+    width: 1540px;
+    height: 860px;
 }
 
 
