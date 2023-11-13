@@ -33,7 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
     isDragging = true;
     startX = e.clientX;
     startY = e.clientY;
-    if (e.changedTouches.length) {
+
+    if (e.changedTouches && e.changedTouches.length) {
       startX = e.changedTouches[0].clientX;
       startY = e.changedTouches[0].clientY;
     }
@@ -51,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
       let deltaX = e.clientX - startX;
       let deltaY = e.clientY - startY;
 
-      if (e.changedTouches.length) {
+      if (e.changedTouches && e.changedTouches.length) {
         deltaX = e.changedTouches[0].clientX - startX;
         deltaY = e.changedTouches[0].clientY - startY;
       }
