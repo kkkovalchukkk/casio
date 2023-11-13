@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let currentScale = 100;
   let isDragging = false;
   let startX, startY, initialX, initialY;
+  let hintTouched = false;
 
   const startDrag = (e) => {
     isDragging = true;
@@ -77,6 +78,11 @@ window.addEventListener('DOMContentLoaded', () => {
   mapViewerHintEls.forEach((h, idx) => {
     h.addEventListener('click', (e) => {
       e.stopPropagation();
+
+      if (e.pointerType === 'touch' && !hintTouched) {
+        hintTouched = true;
+        return;
+      }
       currentScale = 100;
       mapViewerHomeSlideEl.classList.remove('map-viewer__content-item--active');
       mapViewerInsideLocationEls[idx].classList.add(
@@ -87,7 +93,13 @@ window.addEventListener('DOMContentLoaded', () => {
       mapViewerContentEl.style.transform = `scale(${currentScale}%)`;
       mapViewerMenuEl.classList.add('map-viewer__menu--active');
       mapViewerCurrentLocationEl.textContent = idx + 1 + ' палуба';
+      hintTouched = false;
     });
+
+    h.addEventListener('touch', () => {
+      e.preventDefault();
+    });
+
     h.addEventListener('mousedown', (e) => {
       e.stopPropagation();
     });
