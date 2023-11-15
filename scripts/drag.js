@@ -27,11 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const container = document.getElementById('myPanzoom');
 
-  new Panzoom(container, {
-    //
-  });
-
-  let hintTouched = false;
+  new Panzoom(container, {});
 
   mapViewerContentEl
     .querySelectorAll('img')
@@ -43,8 +39,11 @@ window.addEventListener('DOMContentLoaded', () => {
     h.addEventListener('click', (e) => {
       e.stopPropagation();
 
-      if (e.pointerType === 'touch' && !hintTouched) {
-        hintTouched = true;
+      if (e.pointerType === 'touch' && !h.classList.contains('touched')) {
+        document
+          .querySelectorAll('.touched')
+          .forEach((ht) => ht.classList.remove('touched'));
+        h.classList.add('touched');
         return;
       }
       mapViewerHomeSlideEl.classList.remove('map-viewer__content-item--active');
@@ -53,7 +52,10 @@ window.addEventListener('DOMContentLoaded', () => {
       );
       mapViewerMenuEl.classList.add('map-viewer__menu--active');
       mapViewerCurrentLocationEl.textContent = idx + 1 + ' палуба';
-      hintTouched = false;
+      if (h.classList.contains('hint--hall')) {
+        mapViewerCurrentLocationEl.textContent = 'Конференц-зал';
+      }
+      h.classList.remove('touched');
     });
 
     // h.addEventListener('touch', () => {

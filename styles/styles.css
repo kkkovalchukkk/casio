@@ -1030,32 +1030,33 @@ body.body--map {
 }
 
 .map-viewer__content-item-link--1 {
-    left: 150px;
-    bottom: 390px;
+    left: 13%;
+    bottom: 46%;
 }
 
 .map-viewer__content-item-link--2 {
-    left: 300px;
-    bottom: 461px;
+    left: 27%;
+    bottom: 65%;
 }
 
 .map-viewer__content-item-link--3 {
-    left: 522px;
-    bottom: 507px;
+    left: 44%;
+    bottom: 48%;
 }
 
 .map-viewer__content-item-link--4 {
-    right: 343px;
-    bottom: 412px;
+    right: 24%;
+    bottom: 46%;
 }
 
 .map-viewer__content-item-link--5 {
-    right: 51px;
-    bottom: 390px;
+    right: 5%;
+    bottom: 47%;
 }
 
 
 .hint {
+    /* max-width: 220px; */
     position: absolute;
     padding: 12px;
     display: flex;
@@ -1073,6 +1074,7 @@ body.body--map {
     width: 36px;
     height: 36px;
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     background: linear-gradient(119deg, #EE7F39 28.08%, #B53811 91.63%);
@@ -1097,10 +1099,15 @@ body.body--map {
     transition: .23s;
 }
 
+.hint--hall .hint__body {
+    max-width: 140px;
+}
+
+
 .hint__heading {
     color: var(--white);
     font-family: var(--mainFont);
-    font-size: 20px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -1109,7 +1116,7 @@ body.body--map {
 .hint__text {
     color: var(--white);
     font-family: var(--mainFont);
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1131,18 +1138,23 @@ body.body--map {
 }
 
 .hint--2 {
-    bottom: 31.5%;
-    left: 30%;
+    bottom: 33.5%;
+    left: 31%;
 }
 
 .hint--3 {
-    bottom: 35.5%;
-    left: 40%;
+    bottom: 36.5%;
+    left: 44%;
 }
 
 .hint--4 {
-    bottom: 39%;
-    left: 48%;
+    bottom: 41%;
+    left: 56%;
+}
+
+.hint--5 {
+    bottom: 32.5%;
+    left: 14%;
 }
 
 .map-viewer__img {
@@ -1160,6 +1172,7 @@ body.body--map {
     /* position: absolute;
     left: 0;
     top: 0; */
+    position: relative;
     width: 100%;
     max-width: 1540px;
     height: fit-content;
@@ -1173,6 +1186,19 @@ body.body--map {
     position: relative;
 } */
 
+@media (max-width:1396px) {
+    .hint__num {
+        width: 28px;
+        height: 28px;
+    }
+
+    .hint__num svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width:1340px) {}
 
 @media (max-width:1280px) {
     .popup--window .popup__register-form {
@@ -1186,6 +1212,12 @@ body.body--map {
 }
 
 @media (max-width:1196px) {
+    .map-viewer__content-item-link {
+
+        padding: 5px 16px;
+        font-size: 10px;
+    }
+
 
     .profile {
         right: 16px;
@@ -1217,15 +1249,35 @@ body.body--map {
         max-height: 556px;
     }
 
-    .hint__num {
-        width: 24px;
-        height: 24px;
+    .hint {
+        padding: 6px;
+        gap: 8px;
+        padding-right: 12px;
+    }
+
+    .hint__heading {
         font-size: 12px;
     }
 
+    .hint__text {
+        font-size: 10px;
+    }
+
+
+    .hint__num {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .hint--hall .hint__body {
+        max-width: 110px;
+    }
+
+    /* 
     .hint--1 {
-        left: 39.2%;
-        bottom: 21%;
+        left: 41.2%;
+        bottom: 25%;
     }
 
     .hint--2 {
@@ -1239,7 +1291,7 @@ body.body--map {
     .hint--4 {
         bottom: 37%;
         left: 50%;
-    }
+    } */
 }
 
 
@@ -1250,9 +1302,19 @@ body.body--map {
         left: 16px;
     }
 
+    .hint {
+        gap: 8px;
+        padding: 6px;
+    }
+
 }
 
 @media (max-width:960px) {
+
+    .map-viewer__content-item-link {
+        max-width: 120px;
+    }
+
     .profile {
         top: 50px;
         right: 13px;
@@ -1269,24 +1331,6 @@ body.body--map {
         bottom: 212px;
     }
 
-    .hint--1 {
-        left: 39.2%;
-        bottom: 18%;
-    }
-
-    .hint--2 {
-        bottom: 26%;
-        left: 25%;
-    }
-
-    .hint--3 {
-        bottom: 30%;
-    }
-
-    .hint--4 {
-        bottom: 36%;
-        left: 50%;
-    }
 }
 
 @media (max-width:832px) {
@@ -1382,38 +1426,38 @@ body.body--map {
 
 @media (max-width:768px) {
 
-
-    .hint {
-        gap: 8px;
+    .map-viewer__content-item-link {
+        font-size: 8px;
         padding: 6px;
     }
 
+    .map-viewer {
+        width: calc(100% - 32px);
+    }
+
     .hint__heading {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .hint__text {
-        font-size: 12px;
+        font-size: 8px;
     }
 
-    .hint--1 {
-        left: 39.2%;
-        bottom: 18%;
+    .hint__num {
+        font-size: 10px;
+        width: 16px;
+        height: 16px;
+        border-width: 0.5px;
     }
 
-    .hint--2 {
-        bottom: 26%;
-        left: 15%;
+    .hint {
+        padding: 4px;
     }
 
-    .hint--3 {
-        bottom: 30%;
+    .hint--hall .hint__text {
+        display: none;
     }
 
-    .hint--4 {
-        bottom: 36%;
-        left: 55%;
-    }
 
     .map-viewer__controls {
         left: 16px;
@@ -1574,6 +1618,11 @@ body.body--map {
 
 
 @media (max-width:640px) {
+
+    .map-viewer__content-item-link {
+        max-width: 96px;
+    }
+
     .player {
         min-width: unset;
         gap: 16px;
@@ -1624,33 +1673,42 @@ body.body--map {
 }
 
 @media (max-width:576px) {
+    .map-viewer__content-item-link {
+        padding: 2px;
+    }
 
+    .map-viewer__content-item-link--4 {
+        right: 27%;
+    }
+
+
+    .hint {
+        gap: 2px;
+    }
 
     .map-viewer {
         width: calc(100% - 16px);
     }
 
 
-    .hint--1 {
-        bottom: 16%;
-    }
-
-    .hint--2 {
-        bottom: 26%;
-        left: 15%;
-    }
-
-    .hint--3 {
-        bottom: 32%;
-    }
-
-    .hint--4 {
-        bottom: 36%;
-        left: 58%;
-    }
 
     .map-viewer {
         max-height: 264px;
+    }
+
+
+    .hint__heading,
+    .hint__num {
+        font-size: 8px;
+    }
+
+    .hint__text {
+        font-size: 6px;
+    }
+
+    .hint__num {
+        width: 12px;
+        height: 12px;
     }
 
     .map {
@@ -1740,6 +1798,14 @@ body.body--map {
 }
 
 @media (max-width:475px) {
+    .map-viewer__content-item-link {
+        font-size: 6px;
+    }
+
+    .map-viewer {
+        width: 100%;
+    }
+
     .map {
         max-width: 214px;
         min-height: 193px;
@@ -1753,6 +1819,9 @@ body.body--map {
 }
 
 @media (max-width:425px) {
+    .map-viewer__content-item-link {
+        max-width: 64px;
+    }
 
     .map-btn {
         bottom: 64px;
