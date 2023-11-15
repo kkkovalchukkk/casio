@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAX AZART</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.css" />
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
@@ -980,7 +981,7 @@
             </div>
         </div>
 
-        <div class="map-viewer">
+        <div class="map-viewer" id="myPanzoom">
             <div class="map-viewer__menu">
                 <button type="button" class="map-viewer__go-back-btn">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -993,15 +994,16 @@
                     1 палуба
                 </span>
             </div>
-            <div class="map-viewer__controls">
-                <button id="minus-scale-btn" type="button" class="map-viewer__controls-btn">
+            <div class="map-viewer__controls f-custom-controls top-right">
+                <button data-panzoom-action="zoomOut" id="minus-scale-btn" type="button"
+                    class="map-viewer__controls-btn">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M22.5 0C10.082 0 0 10.082 0 22.5C0 34.918 10.082 45 22.5 45C34.918 45 45 34.918 45 22.5C45 10.082 34.918 0 22.5 0ZM12.2727 24.9457H32.7273C33.8564 24.9457 34.7727 23.6291 34.7727 22.5C34.7727 21.3709 33.8564 20.0543 32.7273 20.0543H12.2727C11.1436 20.0543 10.2273 21.3709 10.2273 22.5C10.2273 23.6291 11.1436 24.9457 12.2727 24.9457Z"
                             fill="white" fill-opacity="0.3" />
                     </svg>
                 </button>
-                <button id="plus-scale-btn" type="button" class="map-viewer__controls-btn">
+                <button data-panzoom-action="zoomIn" id="plus-scale-btn" type="button" class="map-viewer__controls-btn">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M22.4998 0C10.0737 0 0 10.0737 0 22.4998C0 34.9254 10.0735 45 22.4995 45C34.9254 45 45 34.9254 45 22.4998C45 10.0737 34.9256 0 22.4998 0ZM31.9919 24.9749H24.7514V32.5452C24.751 33.8146 23.722 34.8436 22.4522 34.8436C21.182 34.8436 20.153 33.8146 20.153 32.5444V24.9749H13.1053C11.8354 24.9745 10.8069 23.9455 10.8061 22.6757C10.8061 21.4063 11.8356 20.3768 13.1053 20.3765L20.1529 20.377V13.6584C20.1529 12.3885 21.1823 11.3592 22.4518 11.3592C23.722 11.3592 24.7514 12.3887 24.751 13.6584L24.7514 20.3764L31.9911 20.3771C33.261 20.3764 34.2908 21.4061 34.2903 22.6763C34.2908 23.9462 33.261 24.9749 31.9919 24.9749Z"
@@ -1032,7 +1034,7 @@
                     </defs>
                 </svg>
             </button>
-            <div class="map-viewer__content">
+            <div class="map-viewer__content f-panzoom__content">
                 <div class="map-viewer__content-item map-viewer__content-item--active" id="home-map">
                     <a href="#" class="hint hint--1">
                         <span class="hint__num">
@@ -1119,6 +1121,7 @@
             </div>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.umd.js"></script>
     <script src="./scripts/message.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/drag.js"></script>
