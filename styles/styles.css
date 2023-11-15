@@ -879,7 +879,8 @@ body.body--map {
     position: absolute;
     width: calc(100% - 64px);
     max-width: 1550px;
-    height: 860px;
+    height: 100%;
+    max-height: 767px;
     left: 0;
     top: 0;
     bottom: 0;
@@ -909,6 +910,7 @@ body.body--map {
     max-width: unset;
     width: 100%;
     height: 100%;
+    max-height: 100% !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -953,8 +955,9 @@ body.body--map {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 1540px;
-    height: 860px;
+    width: 100%;
+    max-width: 1540px;
+    height: fit-content;
     cursor: grab;
 }
 
@@ -1123,32 +1126,32 @@ body.body--map {
 }
 
 .hint--1 {
-    bottom: 212px;
-    left: 608px;
+    bottom: 23%;
+    left: 40%;
 }
 
 .hint--2 {
-    bottom: 277px;
-    left: 435px;
+    bottom: 31.5%;
+    left: 30%;
 }
 
 .hint--3 {
-    bottom: 310px;
-    left: 610px;
+    bottom: 35.5%;
+    left: 40%;
 }
 
 .hint--4 {
-    bottom: 345px;
-    left: 787px;
+    bottom: 39%;
+    left: 48%;
 }
 
 .map-viewer__img {
     /* position: absolute;
     left: 0;
     top: 0; */
-    width: 1540px;
-    height: 860px;
-    object-fit: cover;
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
     object-position: center;
     user-select: none;
 }
@@ -1157,8 +1160,9 @@ body.body--map {
     /* position: absolute;
     left: 0;
     top: 0; */
-    width: 1540px;
-    height: 860px;
+    width: 100%;
+    max-width: 1540px;
+    height: fit-content;
 }
 
 
@@ -1208,7 +1212,36 @@ body.body--map {
         border: 2px solid #EE7F39;
         border-radius: 20px;
     }
+
+    .map-viewer {
+        max-height: 556px;
+    }
+
+    .hint__num {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .hint--1 {
+        left: 39.2%;
+        bottom: 21%;
+    }
+
+    .hint--2 {
+        bottom: 28.5%;
+    }
+
+    .hint--3 {
+        bottom: 33.5%;
+    }
+
+    .hint--4 {
+        bottom: 37%;
+        left: 50%;
+    }
 }
+
 
 @media (max-width:1024px) {
     .player {
@@ -1216,6 +1249,7 @@ body.body--map {
         margin-right: auto;
         left: 16px;
     }
+
 }
 
 @media (max-width:960px) {
@@ -1233,6 +1267,25 @@ body.body--map {
     .message-box {
         left: 157px;
         bottom: 212px;
+    }
+
+    .hint--1 {
+        left: 39.2%;
+        bottom: 18%;
+    }
+
+    .hint--2 {
+        bottom: 26%;
+        left: 25%;
+    }
+
+    .hint--3 {
+        bottom: 30%;
+    }
+
+    .hint--4 {
+        bottom: 36%;
+        left: 50%;
     }
 }
 
@@ -1259,6 +1312,8 @@ body.body--map {
     }
 
 }
+
+
 
 @media (max-width:1076px) {
     .popup--window .popup__content {
@@ -1326,6 +1381,67 @@ body.body--map {
 }
 
 @media (max-width:768px) {
+
+
+    .hint {
+        gap: 8px;
+        padding: 6px;
+    }
+
+    .hint__heading {
+        font-size: 14px;
+    }
+
+    .hint__text {
+        font-size: 12px;
+    }
+
+    .hint--1 {
+        left: 39.2%;
+        bottom: 18%;
+    }
+
+    .hint--2 {
+        bottom: 26%;
+        left: 15%;
+    }
+
+    .hint--3 {
+        bottom: 30%;
+    }
+
+    .hint--4 {
+        bottom: 36%;
+        left: 55%;
+    }
+
+    .map-viewer__controls {
+        left: 16px;
+        top: 67px;
+    }
+
+    .map-viewer__current-location {
+        font-size: 12px;
+        padding: 2px 11px;
+    }
+
+    .map-viewer__menu {
+        top: 16px;
+        left: 16px;
+    }
+
+    .map-viewer__go-back-btn svg,
+    .map-viewer__controls-btn svg,
+    .map-viewer__close-btn svg {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .map-viewer {
+        max-height: 357px;
+    }
+
     .message-box__label {
         font-size: 14px;
         margin-bottom: 16px;
@@ -1418,6 +1534,8 @@ body.body--map {
 }
 
 @media (max-width:767px) {
+
+
     .player {
         min-width: unset;
         /* flex-direction: column; */
@@ -1507,6 +1625,33 @@ body.body--map {
 
 @media (max-width:576px) {
 
+
+    .map-viewer {
+        width: calc(100% - 16px);
+    }
+
+
+    .hint--1 {
+        bottom: 16%;
+    }
+
+    .hint--2 {
+        bottom: 26%;
+        left: 15%;
+    }
+
+    .hint--3 {
+        bottom: 32%;
+    }
+
+    .hint--4 {
+        bottom: 36%;
+        left: 58%;
+    }
+
+    .map-viewer {
+        max-height: 264px;
+    }
 
     .map {
         display: none;
